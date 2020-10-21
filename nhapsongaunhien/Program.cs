@@ -20,7 +20,7 @@ namespace nhapsongaunhien
                 Console.WriteLine("Ban da doan dung");
             }
             else
-                Console.WriteLine("Ban da doan sai");
+                Console.WriteLine("Ban da doan khong dung");
         }
     }
 }
