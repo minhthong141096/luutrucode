@@ -14,7 +14,8 @@ namespace nhapsongaunhien
             Console.WriteLine("Nhap vao so a: ");
             a = int.Parse(Console.ReadLine());
             Random b = new Random();
-            Console.WriteLine(b.Next(0,20));
+            int kq = b.Next(0, 20);
+            Console.WriteLine("Xuat ra ket qua {0}",kq );
             if (a == b.Next(0, 20))
             {
                 Console.WriteLine("Ban da doan dung");
