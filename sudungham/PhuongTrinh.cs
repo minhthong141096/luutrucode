@@ -63,5 +63,15 @@ namespace sudungham
                 max = z;
             return max;
         }
+
+        internal double Timmin(double x, double y, double z)
+        {
+            double min = x;
+            if (min > y)
+                min = y;
+            if (min > z)
+                min = z;
+            return min;
+        }
     }
 }

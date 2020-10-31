@@ -36,6 +36,7 @@ namespace sudungham
             Console.WriteLine("6. Phep nhan hai so nguyen");
             Console.WriteLine("7. Giai Phuong trinh bac 2");
             Console.WriteLine("8. Tim so lon nhat");
+            Console.WriteLine("8. Tim so be nhat");
 
 
             Console.WriteLine("Chon:");
@@ -50,11 +51,26 @@ namespace sudungham
                 case "6": TinhTich(); break;
                 case "7": GiaiPhuongTrinhbac2(); break;
                 case "8": Timsolonnhat(); break;
+                case "9": Timsobenhat(); break;
 
                 case "exit": return;
             }
             Console.WriteLine(" ");
             Menu();
+        }
+
+        private static void Timsobenhat()
+        {
+            double x, y, z;
+            Console.WriteLine("Nhap vao so thu nhat");
+            double.TryParse(Console.ReadLine(), out x);
+            Console.WriteLine("Nhap vao so thu hai");
+            double.TryParse(Console.ReadLine(), out y);
+            Console.WriteLine("Nhap vao so thu ba");
+            double.TryParse(Console.ReadLine(), out z);
+            PhuongTrinh pt = new PhuongTrinh();
+            double kq10 = pt.Timmin(x,y,z);
+
         }
 
         private static void Timsolonnhat()

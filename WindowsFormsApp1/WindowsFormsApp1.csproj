@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormGiaiPhuongTrinhBacHai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaiPhuongTrinhBacHai.Designer.cs">
+      <DependentUpon>FormGiaiPhuongTrinhBacHai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGiaiPhuongTrinhBacNhat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGiaiPhuongTrinhBacNhat.Designer.cs">
       <DependentUpon>FormGiaiPhuongTrinhBacNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPhepChia.cs">
       <SubType>Form</SubType>
@@ -76,11 +88,29 @@
     <Compile Include="FormPhepTru.Designer.cs">
       <DependentUpon>FormPhepTru.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTimmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimmin.Designer.cs">
+      <DependentUpon>FormTimmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimMax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimMax.Designer.cs">
+      <DependentUpon>FormTimMax.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhuongTrinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormGiaiPhuongTrinhBacHai.resx">
+      <DependentUpon>FormGiaiPhuongTrinhBacHai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGiaiPhuongTrinhBacNhat.resx">
       <DependentUpon>FormGiaiPhuongTrinhBacNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhepChia.resx">
       <DependentUpon>FormPhepChia.cs</DependentUpon>
@@ -93,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhepTru.resx">
       <DependentUpon>FormPhepTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimmin.resx">
+      <DependentUpon>FormTimmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimMax.resx">
+      <DependentUpon>FormTimMax.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
