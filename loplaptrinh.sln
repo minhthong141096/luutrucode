@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30621.155
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nhapsongaunhien", "nhapsongaunhien\nhapsongaunhien.csproj", "{8C4EAB4E-4AD7-493E-959D-C6435F0C05C7}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sudungham", "sudungham\sudungham.csproj", "{38B34FD1-83FD-417A-B5A7-2936913B221D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{E7AE437A-8EFC-48B6-82F4-BEDE1C6DE6F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormQuanLySinhVien", "FormQuanLySinhVien\FormQuanLySinhVien.csproj", "{24561ACF-9919-4337-AD57-688C15FAA164}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{E7AE437A-8EFC-48B6-82F4-BEDE1C6DE6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7AE437A-8EFC-48B6-82F4-BEDE1C6DE6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7AE437A-8EFC-48B6-82F4-BEDE1C6DE6F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24561ACF-9919-4337-AD57-688C15FAA164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24561ACF-9919-4337-AD57-688C15FAA164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24561ACF-9919-4337-AD57-688C15FAA164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24561ACF-9919-4337-AD57-688C15FAA164}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

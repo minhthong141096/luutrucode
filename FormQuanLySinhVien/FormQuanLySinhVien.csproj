@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E7AE437A-8EFC-48B6-82F4-BEDE1C6DE6F4}</ProjectGuid>
+    <ProjectGuid>{24561ACF-9919-4337-AD57-688C15FAA164}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <RootNamespace>FormQuanLySinhVien</RootNamespace>
+    <AssemblyName>FormQuanLySinhVien</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -46,98 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormDangNhap.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGiaiPhuongTrinhBacHai.cs">
+    <Compile Include="FormBaoCaoDiemTheoLop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGiaiPhuongTrinhBacHai.Designer.cs">
-      <DependentUpon>FormGiaiPhuongTrinhBacHai.cs</DependentUpon>
+    <Compile Include="FormBaoCaoDiemTheoLop.Designer.cs">
+      <DependentUpon>FormBaoCaoDiemTheoLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGiaiPhuongTrinhBacNhat.cs">
+    <Compile Include="FormBaoCaoSinhVienHocLai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGiaiPhuongTrinhBacNhat.Designer.cs">
-      <DependentUpon>FormGiaiPhuongTrinhBacNhat.cs</DependentUpon>
+    <Compile Include="FormBaoCaoSinhVienHocLai.Designer.cs">
+      <DependentUpon>FormBaoCaoSinhVienHocLai.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="FormBaoCaoSinhVienTheoLop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="FormBaoCaoSinhVienTheoLop.Designer.cs">
+      <DependentUpon>FormBaoCaoSinhVienTheoLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPhepChia.cs">
+    <Compile Include="FormDanhSachLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPhepChia.Designer.cs">
-      <DependentUpon>FormPhepChia.cs</DependentUpon>
+    <Compile Include="FormDanhSachLopHoc.Designer.cs">
+      <DependentUpon>FormDanhSachLopHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPhepCong.cs">
+    <Compile Include="FormDanhSachSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPhepCong.Designer.cs">
-      <DependentUpon>FormPhepCong.cs</DependentUpon>
+    <Compile Include="FormDanhSachSinhVien.Designer.cs">
+      <DependentUpon>FormDanhSachSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPhepNhan.cs">
+    <Compile Include="FormThemLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPhepNhan.Designer.cs">
-      <DependentUpon>FormPhepNhan.cs</DependentUpon>
+    <Compile Include="FormThemLopHoc.Designer.cs">
+      <DependentUpon>FormThemLopHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPhepTru.cs">
+    <Compile Include="FormThemSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPhepTru.Designer.cs">
-      <DependentUpon>FormPhepTru.cs</DependentUpon>
+    <Compile Include="FormThemSinhVien.Designer.cs">
+      <DependentUpon>FormThemSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTimmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTimmin.Designer.cs">
-      <DependentUpon>FormTimmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTimMax.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTimMax.Designer.cs">
-      <DependentUpon>FormTimMax.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PhuongTrinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaiPhuongTrinhBacHai.resx">
-      <DependentUpon>FormGiaiPhuongTrinhBacHai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaiPhuongTrinhBacNhat.resx">
-      <DependentUpon>FormGiaiPhuongTrinhBacNhat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPhepChia.resx">
-      <DependentUpon>FormPhepChia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPhepCong.resx">
-      <DependentUpon>FormPhepCong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPhepNhan.resx">
-      <DependentUpon>FormPhepNhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPhepTru.resx">
-      <DependentUpon>FormPhepTru.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTimmin.resx">
-      <DependentUpon>FormTimmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTimMax.resx">
-      <DependentUpon>FormTimMax.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
