@@ -115,21 +115,21 @@
             // sinhViênTheoLớpToolStripMenuItem
             // 
             this.sinhViênTheoLớpToolStripMenuItem.Name = "sinhViênTheoLớpToolStripMenuItem";
-            this.sinhViênTheoLớpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sinhViênTheoLớpToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.sinhViênTheoLớpToolStripMenuItem.Text = "Sinh Viên Theo Lớp";
             this.sinhViênTheoLớpToolStripMenuItem.Click += new System.EventHandler(this.sinhViênTheoLớpToolStripMenuItem_Click);
             // 
             // sonhViênHọcLạiToolStripMenuItem
             // 
             this.sonhViênHọcLạiToolStripMenuItem.Name = "sonhViênHọcLạiToolStripMenuItem";
-            this.sonhViênHọcLạiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sonhViênHọcLạiToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.sonhViênHọcLạiToolStripMenuItem.Text = "Sinh Viên Học Lại";
             this.sonhViênHọcLạiToolStripMenuItem.Click += new System.EventHandler(this.sinhViênHọcLạiToolStripMenuItem_Click);
             // 
             // điểmTheoLớpToolStripMenuItem
             // 
             this.điểmTheoLớpToolStripMenuItem.Name = "điểmTheoLớpToolStripMenuItem";
-            this.điểmTheoLớpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.điểmTheoLớpToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.điểmTheoLớpToolStripMenuItem.Text = "Điểm Theo Lớp";
             this.điểmTheoLớpToolStripMenuItem.Click += new System.EventHandler(this.điểmTheoLớpToolStripMenuItem_Click);
             // 
@@ -146,6 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";

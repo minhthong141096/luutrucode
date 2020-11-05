@@ -53,6 +53,8 @@
             this.txtmatkhau.Name = "txtmatkhau";
             this.txtmatkhau.Size = new System.Drawing.Size(279, 20);
             this.txtmatkhau.TabIndex = 1;
+            this.txtmatkhau.UseSystemPasswordChar = true;
+            this.txtmatkhau.TextChanged += new System.EventHandler(this.txtmatkhau_TextChanged);
             // 
             // label1
             // 
@@ -125,7 +127,7 @@
             this.Controls.Add(this.txtmatkhau);
             this.Controls.Add(this.txttaikhoan);
             this.Name = "FormDangNhap";
-            this.Text = "FormDangNhap";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.FormDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

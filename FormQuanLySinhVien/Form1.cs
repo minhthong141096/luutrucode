@@ -60,8 +60,8 @@ namespace FormQuanLySinhVien
         {
 
             Form fThemLop = new FormThemLopHoc();
-            fThemLop.MdiParent = this;
-            fThemLop.Show();
+           // fThemLop.MdiParent = this;
+            fThemLop.ShowDialog();
         }
 
         private void danhSáchLớpToolStripMenuItem_Click(object sender, EventArgs e)

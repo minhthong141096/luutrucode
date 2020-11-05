@@ -52,5 +52,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void txtmatkhau_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
