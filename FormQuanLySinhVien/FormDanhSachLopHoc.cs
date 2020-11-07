@@ -44,7 +44,8 @@ namespace FormQuanLySinhVien
             //Lấy mã lớp học khi chọn
            string malophoc = dgvdanhsachlophoc.Rows[e.RowIndex].Cells[0].Value.ToString();
             //MessageBox.Show(malophoc.ToString());
-
+            Form fSuaLopHoc = new FormSuaLopHoc();
+            fSuaLopHoc.ShowDialog();
         }
     }
 }
