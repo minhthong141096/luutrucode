@@ -40,12 +40,17 @@ namespace FormQuanLySinhVien
         }
 
         private void dgvdanhsachlophoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        { 
-            //Lấy mã lớp học khi chọn
-           string malophoc = dgvdanhsachlophoc.Rows[e.RowIndex].Cells[0].Value.ToString();
-            //MessageBox.Show(malophoc.ToString());
-            Form fSuaLopHoc = new FormSuaLopHoc();
-            fSuaLopHoc.ShowDialog();
+        {
+            // lấy mã lớp học từ DatagridView
+            string maLopHoc = dgvdanhsachlophoc.Rows[e.RowIndex].Cells[0].Value.ToString();
+            LopHoc lhSua = LopHoc.LopHocById(maLopHoc);
+            Form fsualophoc = new FormSuaLopHoc();
+           var isOk= fsualophoc.ShowDialog();
+            if(isOk==DialogResult.OK)
+            {
+                ResetDanhSach();
+            }
+            LopHoc.SetThongTinSuaLopHoc(lhSua);
         }
     }
 }

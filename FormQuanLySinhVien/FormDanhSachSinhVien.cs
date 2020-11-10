@@ -12,6 +12,8 @@ namespace FormQuanLySinhVien
 {
     public partial class FormDanhSachSinhVien : Form
     {
+        private object sv;
+
         public FormDanhSachSinhVien()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace FormQuanLySinhVien
         {
             Sinhvien sv = new Sinhvien();
             if (Sinhvien.DanhSachSinhVien != null)
-                dgvdanhsachsinhvien.DataSource = Sinhvien.DanhSachSinhVien.ToList();   
+                dgvdanhsachsinhvien.DataSource = Sinhvien.GetDanhSachSinhVien().ToList();   
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -38,5 +40,22 @@ namespace FormQuanLySinhVien
                 resetDanhSachSinhVien();
             }    
         }
+
+        private void dgvdanhsachsinhvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string masV = dgvdanhsachsinhvien.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Sinhvien svSua = Sinhvien.SinhVienbyId(masV);
+            Sinhvien.SetSinhVienSua(svSua);
+            Form fSuasv = new FormSuaSinhVien();
+            
+         var isok =   fSuasv.ShowDialog();
+            if(isok==DialogResult.OK)
+            {
+                resetDanhSachSinhVien();
+            }    
+            
+        }
+
+       
     }
 }

@@ -16,6 +16,7 @@ namespace FormQuanLySinhVien
         public bool GioiTinh { get; set; }
         public DateTime NgaySinh { get; set; }
         public static List<Sinhvien> DanhSachSinhVien;
+        private static Sinhvien ThongTinSinhVienSua;
         public Sinhvien() { }
         public Sinhvien(string maSV, string tenSV, string sDT, string diaChi, bool gioiTinh, DateTime ngaySinh)
         {
@@ -26,6 +27,12 @@ namespace FormQuanLySinhVien
             GioiTinh = gioiTinh;
             NgaySinh = ngaySinh;
         }
+
+        public static List<Sinhvien> GetDanhSachSinhVien()
+        {
+            return DanhSachSinhVien;
+        }
+
         public int Tuoi()
         {
             int nam = DateTime.Now.Year;
@@ -35,6 +42,29 @@ namespace FormQuanLySinhVien
         public string SinhVien2String()
         {
             return String.Format(@"{0}, {1}, {2}, {3}, {4}, {5}", MaSV, TenSV, SDT, DiaChi, GioiTinh, NgaySinh);
+        }
+
+        public static Sinhvien SinhVienbyId(string masV)
+        {
+            foreach (var sv in DanhSachSinhVien)
+            {
+                if (sv.MaSV == masV)
+                    return sv;
+            }
+            return new Sinhvien();
+        }
+        //gán thông tin sinh viên cần sửa
+        public static void SetSinhVienSua(Sinhvien svSua)
+        {
+            ThongTinSinhVienSua = svSua;
+        }
+        public static Sinhvien  GetSinhVienSua()
+        {
+            if(ThongTinSinhVienSua == null)
+            {
+                return new Sinhvien();
+            }    
+           return ThongTinSinhVienSua;
         }
         /// <summary>
         /// Class thêm sinh viên
@@ -53,7 +83,7 @@ namespace FormQuanLySinhVien
         {
             if (DanhSachSinhVien == null)
                 DanhSachSinhVien = new List<Sinhvien>();
-           DanhSachSinhVien.Add(sv);
+            DanhSachSinhVien.Add(sv);
         }
         public static void Xoa(string maSV)
         {

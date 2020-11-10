@@ -16,5 +16,10 @@ namespace FormQuanLySinhVien
         {
             InitializeComponent();
         }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
