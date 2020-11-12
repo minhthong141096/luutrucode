@@ -76,5 +76,12 @@ namespace FormQuanLySinhVien
         {
             Close();
         }
+
+        private void cậpNhậtBảngĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form fThemLop = new FormCapNhatBangDiem();
+            fThemLop.MdiParent = this;
+            fThemLop.Show();
+        }
     }
 }

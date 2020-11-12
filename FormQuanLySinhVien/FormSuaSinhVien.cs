@@ -16,13 +16,13 @@ namespace FormQuanLySinhVien
 
         public FormSuaSinhVien()
         {
+            InitializeComponent();
             List<GioiTinh> lgt = GioiTinh.Get();
             cbbgioitinh.DataSource = lgt;
             cbbgioitinh.DisplayMember = "Name";
             cbbgioitinh.ValueMember = "Id";
-        
             //khởi tạo các đối tượng form
-            InitializeComponent();
+            
             SetInputForm(Sinhvien.GetSinhVienSua());
         }
 
