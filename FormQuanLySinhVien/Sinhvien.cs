@@ -30,6 +30,8 @@ namespace FormQuanLySinhVien
 
         public static List<Sinhvien> GetDanhSachSinhVien()
         {
+            if (DanhSachSinhVien == null)
+                return new List<Sinhvien>();
             return DanhSachSinhVien;
         }
 

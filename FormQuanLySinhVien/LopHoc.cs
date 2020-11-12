@@ -27,11 +27,19 @@ namespace FormQuanLySinhVien
         {
             return String.Format("{0},{1},{2},", MaLop, TenLop, DiaChi);
         }
-/// <summary>
-/// thêm thông tin đối tượng hiện tại vào danh sách
-/// là this
-/// </summary>
-        
+
+        public static List<LopHoc> GetDanhSachLopHoc()
+        {
+            if (DanhSachLopHoc == null)
+                return new List<LopHoc>();
+            return DanhSachLopHoc;
+        }
+
+        /// <summary>
+        /// thêm thông tin đối tượng hiện tại vào danh sách
+        /// là this
+        /// </summary>
+
         public void Them()
         {
             if (DanhSachLopHoc == null)
