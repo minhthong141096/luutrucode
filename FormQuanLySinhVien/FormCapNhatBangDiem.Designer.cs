@@ -51,6 +51,7 @@
             this.dgvbangdiem.Name = "dgvbangdiem";
             this.dgvbangdiem.Size = new System.Drawing.Size(480, 452);
             this.dgvbangdiem.TabIndex = 0;
+            this.dgvbangdiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbangdiem_CellContentClick);
             // 
             // cbbmalop
             // 
@@ -154,6 +155,7 @@
             this.btnxoa.TabIndex = 12;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // FormCapNhatBangDiem
             // 

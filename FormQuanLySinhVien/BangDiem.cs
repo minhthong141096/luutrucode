@@ -24,11 +24,15 @@ namespace FormQuanLySinhVien
             DiemHoa = diemHoa;
         }
 
+        public BangDiem()
+        {
+        }
+
         public string BangDiem2String()
         {
             return String.Format("{0},{1},{2},{3},{4}", MaLop, MaSV, DiemToan, DiemLy, DiemHoa);
         }
-        public List<BangDiem> GetDanhSachBangDiem()
+        public static List<BangDiem> GetDanhSachBangDiem()
         {
             if (DanhSachBangDiem == null)
                 return new List<BangDiem>();
@@ -50,5 +54,14 @@ namespace FormQuanLySinhVien
             Them(bd);
         }
 
+        internal static BangDiem BangDiemByMaSVMaLop(string masv,  string malop)
+        {
+            foreach (var item in DanhSachBangDiem)
+            {
+                if (item.MaLop == malop && item.MaSV == masv)
+                    return item;
+            }
+            return new BangDiem();
+        }
     }
 }

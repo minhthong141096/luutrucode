@@ -13,7 +13,9 @@ namespace FormQuanLySinhVien
     public partial class FormCapNhatBangDiem : Form
     {
         public int IsThis = 1;
-        //1 
+        const int Sua = 0;
+        const int Them = 1;
+        
         public FormCapNhatBangDiem()
         {
             InitializeComponent();
@@ -24,12 +26,30 @@ namespace FormQuanLySinhVien
             try
             {
                 BangDiem bd = GetInputForm();
+                if(IsThis == 1)
+                {
+                    BangDiem.Them(bd);
+                    ResetData();
+                    //reset data
+                }
+                else
+                {
+                    //sua
+                    BangDiem.Sua(bd);
+                    IsThis = Them;
+                    ResetData();
+                }
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void ResetData()
+        {
+            dgvbangdiem.DataSource = BangDiem.GetDanhSachBangDiem().ToList();
         }
 
         private BangDiem GetInputForm()
@@ -106,12 +126,12 @@ namespace FormQuanLySinhVien
             #endregion
             Sinhvien iteamSV = (Sinhvien)cbbmasinhvien.SelectedItem;
             LopHoc iteamLH = (LopHoc)cbbmalop.SelectedItem;
-            return new BangDiem(iteamSV.MaSV, iteamLH.MaLop,toan, ly , hoa);
+            return new BangDiem( iteamLH.MaLop, iteamSV.MaSV, toan, ly , hoa);
         }
 
         private void FormCapNhatBangDiem_Load(object sender, EventArgs e)
         {
-            cbbmalop.DataSource = LopHoc.GetDanhSachLopHoc();
+            cbbmalop.DataSource = LopHoc.GetDanhSachLopHoc().ToList();
             cbbmalop.DisplayMember = "TenLop";
             cbbmalop.ValueMember = "MaLop";
             cbbmasinhvien.DataSource = Sinhvien.GetDanhSachSinhVien().ToList();
@@ -119,7 +139,34 @@ namespace FormQuanLySinhVien
             cbbmasinhvien.ValueMember = "MaSV";
 
         }
-      
-       
+
+        private void dgvbangdiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IsThis = Sua;
+            string MaSV = dgvbangdiem.Rows[e.RowIndex].Cells[0].Value.ToString();
+            string MaLop = dgvbangdiem.Rows[e.RowIndex].Cells[1].Value.ToString();
+            //Lấy thông tin dòng cần sửa
+           BangDiem bdSua = BangDiem.BangDiemByMaSVMaLop( MaLop,  MaSV);
+            // gán thông tin dòng cần sửa vào form
+            SetInputForm(bdSua);
+        }
+
+        private void SetInputForm(BangDiem bdSua)
+        {
+            txtdiemtoan.Text = bdSua.DiemToan.ToString() ;
+            txtdiemhoa.Text = bdSua.DiemHoa.ToString();
+            txtdiemly.Text = bdSua.DiemLy.ToString();
+            cbbmalop.SelectedValue = bdSua.MaLop;
+            cbbmasinhvien.SelectedValue = bdSua.MaSV;
+        }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
+            var isOk = MessageBox.Show("Muốn Xóa Không");
+            if (isOk == DialogResult.OK)
+                return;
+            BangDiem bdSua = GetInputForm();
+            BangDiem.Xoa(bdSua.MaLop, bdSua.MaSV);
+        }
     }
 }
